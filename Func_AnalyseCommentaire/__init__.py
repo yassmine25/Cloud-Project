@@ -9,7 +9,7 @@ def main(mytimer: func.TimerRequest) -> None:
 
     try:
         # Connexion au conteneur Blob Storage (raw-comments)
-        connection_string = "DefaultEndpointsProtocol=https;AccountName=commentairesstorage;AccountKey=fQwCvllKcL3YCJ3WAIllddNmkW+2TlHkI8vn/d8/D4U7xaR5VK8L5ihzgN0gC3IfSEy8VxXDygxN+AStKJ6IwQ==;EndpointSuffix=core.windows.net"
+        connection_string = "add-here"
         blob_service_client = BlobServiceClient.from_connection_string(connection_string)
         source_container_name = "raw-comments"
         target_container_name = "processed-comments"
@@ -18,8 +18,8 @@ def main(mytimer: func.TimerRequest) -> None:
         target_container = blob_service_client.get_container_client(target_container_name)
 
         # Configuration Azure Cognitive Services Text Analytics
-        endpoint = "https://txt-analysis.cognitiveservices.azure.com/"
-        subscription_key = "FNrAwdRkYFR3auTg6nB1N18A1vF8N15YZybJgawLwVg5KHlncu3vJQQJ99ALAC5T7U2XJ3w3AAAaACOGmGL2"
+        endpoint = "add-here"
+        subscription_key = "add-here"
         headers = {"Ocp-Apim-Subscription-Key": subscription_key, "Content-Type": "application/json"}
 
         # Parcourir les blobs dans `raw-comments`
