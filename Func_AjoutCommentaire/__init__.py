@@ -13,7 +13,7 @@ def main(req):
 
     # Stocker le commentaire dans Blob Storage
     compte_storage = "commentairesstorage"
-    clé_connexion = "fQwCvllKcL3YCJ3WAIllddNmkW+2TlHkI8vn/d8/D4U7xaR5VK8L5ihzgN0gC3IfSEy8VxXDygxN+AStKJ6IwQ=="
+    clé_connexion = "add-here"
     blob_client = blob_module.ContainerClient.from_connection_string(clé_connexion, "raw-comments")
 
     # Ajoutez le commentaire au Blob sous un format JSON
